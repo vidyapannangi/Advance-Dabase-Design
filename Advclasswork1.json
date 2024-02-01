@@ -1,3 +1,5 @@
+//Query1
+//Collection and Document creation with a person details
 db.createCollection('classwork')
 db.classwork.insertOne({
     "_id": 123,
@@ -14,55 +16,68 @@ db.classwork.insertOne({
     "Address": {
         "city": "Hyderabad",
         "Area": "Madapur",}})
-
 /*OutPut:
 {
   acknowledged: true,
   insertedId: 123
 }*/
 
-db.createCollection('classwork2')
-db.classwork2.insertOne({
-    "id": "POST_ID",
-    "title": "TITLE_OF_POST",
-    "description": "POST_DESCRIPTION",
-    "by": "POST_BY",
-    "url": "URL_OF_POST",
-    "tags": ["TAG1", "TAG2", "TAG3"],
-    "likes": "TOTAL_LIKES",
-    "comments": [
-        {
-            "user": "COMMENT_BY",
-            "message": "TEXT",
-            "dateCreated": "DATE_TIME",
-            "like": "LIKES"
-        },
-        {
-            "user": "COMMENT_BY",
-            "message": "TEXT",
-            "dateCreated": "DATE_TIME",
-            "like": "LIKES"
-        }
-    ]
-}
-)
-Output:
-{
-  acknowledged: true,
-  insertedId: ObjectId('65b98c01ccaba988cd727a6e')
-}
+//Query 2
+//InsertOne() Example
 
+db.createCollection('School')
+db.School.insertOne([  
+  {
+    title: "Post Title 2",
+    body: "Body of post.",
+    category: "Event",
+    likes: 2,
+    tags: ["news", "events"],
+    date: Date()
+  }
 
-db.createCollection('classwork3')
-{ ok: 1 }
-db.classwork3.insertOne({
-"_id": "1234",
-"name": "Tom Hanks",
-"contact": "987654321",
-"dob": "01-01-1991"
-})
-Output:
-{
+/* OutPut:
+ {
   acknowledged: true,
-  insertedId: '1234'
-}
+  insertedIds: {
+    '0': ObjectId('65b1553c5326bc7c7f57cf1c')
+    }
+}*/
+
+  //Query 3 : InsertMany() Example
+db.createCollection('Home')
+db.Home.insertMany([  
+  {
+    title: "Post Title 2",
+    body: "Body of post.",
+    category: "Event",
+    likes: 2,
+    tags: ["news", "events"],
+    date: Date()
+  },
+  {
+    title: "Post Title 3",
+    body: "Body of post.",
+    category: "Technology",
+    likes: 3,
+    tags: ["news", "events"],
+    date: Date()
+  },
+  {
+    title: "Post Title 4",
+    body: "Body of post.",
+    category: "Event",
+    likes: 4,
+    tags: ["news", "events"],
+  }
+])
+
+/*OutPut:
+    {
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('65b1553c5326bc7c7f57cf1c'),
+    '1': ObjectId('65b1553c5326bc7c7f57cf1d'),
+    '2': ObjectId('65b1553c5326bc7c7f57cf1e')
+  }
+}*/

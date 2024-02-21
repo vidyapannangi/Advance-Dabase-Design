@@ -20,7 +20,7 @@ try:
     products_collection = db.products
 
     # Define the filter to update the product with the given ObjectId
-    filter_query = {"_id": ObjectId("65c3ccf79cc8037988860049")}
+    filter_query = {"_id": ObjectId("65d6404928558977256a9d4a")}
 
     # Define the update operation to increase the price of the product by 10
     update_operation = {"$inc": {"price": 2}}

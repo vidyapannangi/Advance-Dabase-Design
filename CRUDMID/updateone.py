@@ -4,7 +4,7 @@ from bson.objectid import ObjectId
 import pprint
 
 # Define the MongoDB connection URI
-uri = "mongodb+srv://kowshikavula14:Smileysmiley183@cluster0.prsfy7f.mongodb.net/?retryWrites=true&w=majority"
+uri = "mongodb+srv://vidyapannangi:test123@cluster0.6woaqse.mongodb.net/?retryWrites=true&w=majority"
 
 # Create a new client and connect to the server
 client = MongoClient(uri, server_api=ServerApi('1'))
@@ -20,9 +20,9 @@ try:
     products_collection = db.products
 
     # Define the filter to update the product with the given ObjectId
-    filter_query = {"_id": ObjectId("65d6404928558977256a9d4a")}
+    filter_query = {"_id": ObjectId("65da2a5b44169cd034887097")}
 
-    # Define the update operation to increase the price of the product by 10
+    # Define the update operation to increase the price of the product by 2
     update_operation = {"$inc": {"price": 2}}
 
     # Print the original document
@@ -44,4 +44,3 @@ except Exception as e:
 finally:
     # Close the MongoClient to release resources
     client.close()
-

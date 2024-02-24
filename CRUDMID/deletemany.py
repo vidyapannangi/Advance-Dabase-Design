@@ -3,7 +3,7 @@ from pymongo.server_api import ServerApi
 from bson.objectid import ObjectId
 import pprint
 
-uri = "mongodb+srv://kowshikavula14:Smileysmiley183@cluster0.prsfy7f.mongodb.net/?retryWrites=true&w=majority"
+uri = "mongodb+srv://vidyapannangi:test123@cluster0.6woaqse.mongodb.net/?retryWrites=true&w=majority"
 
 # Create a new client and connect to the server
 client = MongoClient(uri, server_api=ServerApi('1'))
@@ -18,8 +18,8 @@ try:
     # Get reference to 'products' collection
     products_collection = db.products
 
-    # Filter by some condition (for example, products with price less than 2000)
-    documents_to_delete = {"price": {"$lt": 2000}}
+    # Filter by some condition (for example, products with price less than 4)
+    documents_to_delete = {"price": {"$lt": 4}}
 
     # Search for sample document before delete
     print("Searching for sample target document before delete: ")

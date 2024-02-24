@@ -19,7 +19,7 @@ try:
     products_collection = db.products
 
     # Filter
-    select_products = {"category": "Dairy"}
+    select_products = {"category": "Fruits"}
 
     # Update operation
     set_field = {"$set": {"discount": 0.1}}

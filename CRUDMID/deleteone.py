@@ -3,7 +3,7 @@ from pymongo.server_api import ServerApi
 from bson.objectid import ObjectId
 import pprint
 
-uri = "mongodb+srv://kowshikavula14:Smileysmiley183@cluster0.prsfy7f.mongodb.net/?retryWrites=true&w=majority"
+uri = "mongodb+srv://vidyapannangi:test123@cluster0.6woaqse.mongodb.net/?retryWrites=true&w=majority"
 
 # Create a new client and connect to the server
 client = MongoClient(uri, server_api=ServerApi('1'))
@@ -19,7 +19,7 @@ try:
     products_collection = db.products
 
     # Filter by ObjectId
-    document_to_delete = {"_id": ObjectId("65c3ccf79cc8037988860048")}
+    document_to_delete = {"_id": ObjectId("65da2a5b44169cd034887097")}
 
     # Search for document before delete
     print("Searching for target document before delete: ")
